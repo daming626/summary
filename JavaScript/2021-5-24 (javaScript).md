@@ -28,11 +28,13 @@ JavaScript 能够显示 HTML 元素
 ### 用法
 
 ```html
-JavaScript是一个弱类型语言
+JavaScript是一个弱类型语言，五种基本数据类型Undefined、Null、Boolean、Number和String。
 variable：变量英文单词
 js中变量都用var进行声明，甚至变量不需要声明？！
 
 阻止超链接的默认行为 <a href="javascript:void(0)" ></a>
+
+alert用来做弹窗？！
 
 var a=3;
 console.log(typeof a)//打印a的数据类型
@@ -182,6 +184,22 @@ bookPublisher
 --------------------------
 object
 
+今天给大家分享一些面试题，以及我个人的见解，话不多说，上题！
+var person={fname:"John",lname:"Doe",age:25};
+var txt="";
+for (x in person){
+       txt= txt + x+ person[x];
+}
+alert(txt);
+输出为？
+
+person是一个对象，对象的遍历是遍历它的下标，所以x指的便是对象中的
+fname，lname，age。
+而对象有又是以关联数组的形式来访问里面的值，就是person[x]，而不是person.x
+所以txt是下标和值的相加
+最后输出的是:
+
+fnameJohnlnameDoeage25
 ```
 
 ### 事件
@@ -225,4 +243,25 @@ object
 var interval = setInterval(f1,3000)
 clearInterval(interval)/*此处放入变量，而不是setInterval(f1,3000)*/
 ```
+
+# [获取DOM元素的方式有哪些](https://www.cnblogs.com/qing-5/p/11489387.html)
+
+````javascript
+   document.getElementById();//id名
+　　document.getElementsByTagName();//标签名
+　　document.getElementsByClassName();//类名
+　　document.getElementsByName();//name属性值，一般不用
+
+　　document.querySelector();
+　　document.querySelectorAll();
+　　
+   document.documentElement
+　　document.body
+　　document.head
+　　document.title
+　　document.URL
+　　document.domain//返回下载当前文档的服务器域名
+````
+
+
 

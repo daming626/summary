@@ -6,6 +6,13 @@
 	狭义的Servlet是指Java语言实现的一个接口，广义的Servlet是指任何实现了这个Servlet接口的类，一般情况下，人们将Servlet理解为后者。Servlet运行于支持Java的应用服务器中。从原理上讲，Servlet可以响应任何类型的请求，但绝大多数情况下Servlet只用来扩展基于HTTP协议的Web服务器。
 	
 	最早支持Servlet标准的是JavaSoft的Java Web Server，此后，一些其它的基于Java的Web服务器开始支持标准的Servlet。
+	
+	Servlet的生命周期分为5个阶段：加载、创建、初始化、处理客户请求、卸载。
+    (1)加载：容器通过类加载器使用servlet类对应的文件加载servlet 
+    (2)创建：通过调用servlet构造函数创建一个servlet对象 
+    (3)初始化：调用init方法初始化 
+    (4)处理客户请求：每当有一个客户请求，容器会创建一个线程来处理客户请求 
+    (5)卸载：调用destroy方法让servlet自己释放其占用的资源 
 ```
 
 ### servlet-mapping(文件web.xml)

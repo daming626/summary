@@ -94,7 +94,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY '新的密码';
 
 然后在执行mysqld --install mysql
 
-2、忘记初始密码
+2、忘记初始密码或初始化失败
 
 先清除根目录下data文件夹中的数据，然后在cmd中通过命令 sc delete mysql 删除原先数据
 
